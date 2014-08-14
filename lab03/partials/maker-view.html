@@ -1,0 +1,26 @@
+<h2>Motorcycle makers:</h2>
+<input type="text" name="motorcycle-model" value="" class="search-field" placeholder="Enter maker:" ng-model="search.maker">
+<table>
+   <caption>Motorcycle listings</caption>
+   <thead>
+      <tr>
+         <th>#</th>
+         <th>Maker</th>
+         <th>Model</th>
+         <th>Payment</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr data-ng-repeat="motor in motorcycles | filter : search | orderBy:'maker'">
+         <td>{{ $index + 1 }}</td>
+         <td>{{ motor.maker | uppercase }}</td>
+         <td>{{ motor.model }}</td>
+         <td>{{ motor.price / 24 | currency }}</td>
+      </tr>
+   </tbody>
+</table>
+<div>Total bikes: {{ (motorcycles | filter : search).length }}</div>
+
+<a href="#/bike-maker">Makers</a>
+<a href="#/bike-model">Models</a>
+<a href="#/add-bike">Add bike</a>

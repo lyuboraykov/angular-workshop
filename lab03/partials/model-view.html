@@ -1,0 +1,9 @@
+<h2>Ordered by power:</h2>
+
+<div ng-repeat="motor in motorcycles | orderBy:'horsePower':true">
+   {{ motor.maker }} - {{ motor.model }} / {{ motor.horsePower }}
+</div>
+
+<a href="#/bike-maker">Makers</a>
+<a href="#/bike-model">Models</a>
+<a href="#/add-bike">Add bike</a>

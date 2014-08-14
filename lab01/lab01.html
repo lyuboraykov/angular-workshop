@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html data-ng-app="">
+<head></head>
+<body>
+   <h1>Angular JS Programming Lab 1</h1>
+
+   <section id="motorcycles" ng-init="motorcycles = [
+                                 { maker: 'Honda', model: 'VFR750F', price: 8450 },
+                                 { maker: 'Ducati', model: 'Paso 907', price: 3200 },
+                                 { maker: 'BMW', model: 'R1200RT', price: 7699 },
+                                 { maker: 'Yamaha', model: 'Super Tenere', price: 10000 }
+                              ]">
+      
+      <input type="text" name="motorcycle-model" value="" placeholder="Enter maker:" ng-model="search.maker">
+
+      <table>
+         <caption>Motorcycle listings</caption>
+         <thead>
+            <tr>
+               <th>#</th>
+               <th>Maker</th>
+               <th>Model</th>
+               <th>Payment</th>
+            </tr>1
+         </thead>
+         <tbody>
+            <tr data-ng-repeat="motor in motorcycles | filter : search | orderBy:'maker'">
+               <td>{{ $index + 1 }}</td>
+               <td>{{ motor.maker | uppercase }}</td>
+               <td>{{ motor.model }}</td>
+               <td>{{ motor.price / 24 | currency }}</td>
+            </tr>
+         </tbody>
+      </table>
+      <div>Total bikes: {{ (motorcycles | filter : search).length }}</div>
+   </section>
+   <script src="http://localhost:8888/angular.js"></script>
+</body>
+</html>
