@@ -1,0 +1,11 @@
+<h2>Motorcycle makers:</h2>
+<input type="text" name="motorcycle-maker" placeholder="Honda" ng-model="maker" required>
+<input type="text" name="motorcycle-model" placeholder="Supercup" ng-model="model" required>
+<input type="number" name="motorcycle-price" placeholder="10 000$" ng-model="price" required>
+<input type="number" name="motorcycle-bhp" placeholder="100bhp" ng-model="horsePower" required>
+<input type="button" name="add-bike-button" value="Add bike" ng-click="addBike()" required>
+
+<div data-bike-directive data-bikes="motorcycles"></div>
+<div data-bike-template-directive data-bikes="motorcycles"></div>
+
+<div>Total bikes: {{ (motorcycles | filter : search).length }}</div>

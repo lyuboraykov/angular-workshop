@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="bikeApp">
+<head>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8888/css/app.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8888/css/uikit.min.css">
+</head>
+<body>
+    <h1>Angular JS Programming Lab 7</h1>
+    <div>
+        <a class="button" href="#/bike_make">Makes</a>
+        <a class="button" href="#/bike_model">Models</a>
+        <a class="button" href="#/add_bike">Add Bike</a>
+        <a class="button" href="#/load_bike">Load Bike</a>
+    </div><br />
+
+    <div data-ng-view=""></div>
+
+    <script src="http://code.angularjs.org/1.2.0-rc.2/angular.js"></script> 
+    <script src="http://code.angularjs.org/1.2.0-rc.2/angular-route.js"></script>
+    <script src="http://code.angularjs.org/1.2.0-rc.2/angular-resource.js"></script>
+    <script src="js/app.js"></script> 
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script> 
+    <script src="js/directives.js"></script> 
+</body>
+</html>

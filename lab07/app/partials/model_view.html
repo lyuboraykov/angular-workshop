@@ -1,0 +1,22 @@
+<div>
+    Model: <input type="text" data-ng-model="search.model" placeholder="V-Rod" />
+    <table  class="bikeTable">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Payment</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-repeat="bike in bikes | filter:search | orderBy:'model'">
+            <td>{{ $index + 1 }}</td>
+            <td>{{ bike.make | uppercase }}</td>
+            <td>{{ bike.model }}</td>
+            <td>{{ bike.price / 24 | currency }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <p>Total bikes: {{ bikes.length }}</p>
+</div>

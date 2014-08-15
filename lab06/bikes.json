@@ -1,0 +1,24 @@
+[{
+   "maker": "Yamaha",
+   "model": "Super Tenere",
+   "price": "8000",
+   "horsePower": "75"
+},
+{
+   "maker": "Honda",
+   "model": "VFR750R",
+   "price": "10000",
+   "horsePower": "110"   
+},
+{
+   "maker": "BMW",
+   "model": "GS1200",
+   "price": "13000",
+   "horsePower": "90"   
+},
+{
+   "maker": "Kawasaki",
+   "model": "Ninja",
+   "price": "11500",
+   "horsePower": "70"   
+}]

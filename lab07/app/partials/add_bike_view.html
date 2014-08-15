@@ -1,0 +1,32 @@
+<div>
+    <table>
+        <caption>Add a Bike to the Roster {{addCounter}}</caption>
+        <tr><td>Make:</td><td><input type="text" data-ng-model="newBike.make" /></td></tr>
+        <tr><td>Model:</td><td><input type="text" data-ng-model="newBike.model" /></td></tr>
+        <tr><td>Price:</td><td><input type="text" data-ng-model="newBike.price" /></td></tr>
+        <tr>
+            <td></td>
+            <td><button data-ng-click="addBike(newBike.make,newBike.model,newBike.price)"> Add Bike </button></td>
+        </tr>
+    </table>
+    <table class="bikeTable">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Payment</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-repeat="bike in bikes | filter:search | orderBy:'make'">
+            <td>{{$index + 1}}</td>
+            <td>{{ bike.make | uppercase }}</td>
+            <td>{{ bike.model }}</td>
+            <td>{{ bike.price / 24 | currency }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <p>Total bikes: {{bikes.length}}</p>
+    <bike-table data="bikes" />
+</div>

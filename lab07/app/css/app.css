@@ -1,0 +1,17 @@
+.button {
+    font: bold 14px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #222277;
+    padding: 5px 25px 5px 25px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.bikeTable {
+	padding:12px; 
+	width:500px; 
+	text-align:left;
+}

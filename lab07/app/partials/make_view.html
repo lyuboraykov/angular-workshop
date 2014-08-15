@@ -1,0 +1,33 @@
+<div>
+    Make: <input type="text" data-ng-model="search.make" placeholder="Honda" />
+    <table class="bikeTable">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Payment</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-repeat="bike in bikes | filter:search | orderBy:'make'">
+            <td>{{ $index + 1 }}</td>
+            <td>{{ bike.make | uppercase }}</td>
+            <td>{{ bike.model }}</td>
+            <td>{{ bike.price / 24 | currency }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <p>Total bikes: {{ bikes.length }}</p>
+    <div>
+        <span>Specials</span>
+        <table class="bikeTable">
+        <tr>
+            <td>{{ $index + 1 }}</td>
+            <td>{{ special.make | uppercase }}</td>
+            <td>{{ special.model }}</td>
+            <td>{{ special.price / 24 | currency }}</td>
+        </tr>
+        </table>
+    </div>
+</div>
